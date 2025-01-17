@@ -1,0 +1,97 @@
+/* Style Switcher Container */
+.style-switcher {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+    width: 240px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Show Style Switcher */
+.style-switcher.open {
+    transform: translateX(-30%);
+}
+
+/* Close Button Icon */
+.style-switcher .s-icon {
+    position: absolute;
+    top: 10px;
+    right: 100%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 22px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    border: 1px solid var(--bg-black-50);
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* Icon active state */
+.style-switcher .s-icon:hover {
+    background-color: var(--skin-color);
+    color: #fff;
+}
+
+/* Day/Night Button Position */
+.style-switcher .day-night {
+    top: 55px;
+    transition: all 0.3s ease;
+}
+
+/* Section Heading */
+.style-switcher h4 {
+    margin: 0 0 10px;
+    color: var(--text-black-700);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+/* Color Selector */
+.style-switcher .colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.style-switcher .colors span {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Color Hover Effects */
+.style-switcher .colors span:hover {
+    border: 2px solid var(--skin-color);
+    transform: scale(1.1);
+}
+
+/* Color Styles */
+.style-switcher .color-1 { background: #004aad; }
+.style-switcher .color-2 { background: #ec1839; }
+.style-switcher .color-3 { background: #fa5b0f; }
+.style-switcher .color-4 { background: #e1ff00; }
+.style-switcher .color-5 { background: #7d18b4; }
+
+/* Active Color Style (to highlight the active color) */
+.style-switcher .colors span.active {
+    border-color: var(--skin-color);
+    transform: scale(1.2);
+}
